@@ -2,10 +2,14 @@ import React from 'react';
 import IWidget from '../../types/widget';
 import CardContainer from '../CardContainer/CardContainer';
 
-export default function Widget({ widgetType }: IWidget) {
+export default function Widget({ title, subtitle }: IWidget) {
   return (
     <CardContainer>
-      <h1 data-testid="widget-type">{widgetType}</h1>
+      <section>
+        <h1 data-testid="widget-type">{title}</h1>
+
+        {subtitle && <p data-testid="subtitle">{subtitle}</p>}
+      </section>
     </CardContainer>
   );
 }

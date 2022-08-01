@@ -1,3 +1,4 @@
 export default interface IWidget {
-  widgetType: string;
+  title: string;
+  subtitle?: string;
 }
