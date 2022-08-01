@@ -1,4 +1,4 @@
-export default interface ICardContainer {
-    bgColor?: string;
-    children: JSX.Element
+export interface ICardContainer {
+  bgColor?: string;
+  children: JSX.Element;
 }
