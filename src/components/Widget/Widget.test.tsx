@@ -4,17 +4,18 @@ import Widget from './Widget';
 
 test('should render a title', () => {
   const widgetTitle = 'Weather';
-  render(<Widget title={widgetTitle} />);
+  const temp = 2;
+  render(<Widget value={temp} title={widgetTitle} />);
   const title = screen.getByTestId('widget-type');
 
   expect(title.textContent).toBe('Weather');
 });
 
 test('should render a subtitle is sended by props', () => {
-  const subtitle = "Widget subtitle";
+  const subtitle = 'Widget subtitle';
+  const temp = 2;
+  render(<Widget value={temp} title="Weather" subtitle={subtitle} />);
+  const widgetElement = screen.getByTestId('subtitle');
 
-  render(<Widget title="Weather" subtitle={subtitle} />)
-  const widgetElement = screen.getByTestId('subtitle')
-
-  expect(widgetElement.textContent).toBe('Widget subtitle')
-})
+  expect(widgetElement.textContent).toBe('Widget subtitle');
+});

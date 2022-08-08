@@ -8,6 +8,8 @@ export const CardContainerStyled = styled.section<{
   bgColor: string | undefined;
 }>`
   background-color: ${(props) => props.bgColor || '#cccccc'};
+  border-radius: 20px;
+  padding: 20px;
 `;
 
 export default function CardContainer({ bgColor, children }: ICardContainer) {
